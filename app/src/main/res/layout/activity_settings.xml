@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsPaneId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="118dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="157dp"
+        android:src="@drawable/_0473"
+        app:layout_constraintBottom_toTopOf="@+id/SettingTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/SettingTable"
+        android:layout_width="382dp"
+        android:layout_height="392dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="278dp"
+        android:background="#c0c0c0"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+
+        <TableRow
+            android:id="@+id/Mode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/modeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/ModeTitle"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/ModeChoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <RadioGroup
+                android:id="@+id/modeChoiceRaGr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/ezMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ezMode"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/hardMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hardMode"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Theme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/themeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/ThemeTitle"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/ThemeChoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <ImageButton
+                android:id="@+id/santaThemImBtn"
+                android:layout_width="208dp"
+                android:layout_height="155dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/santaclaus"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/kingsThemImBtn"
+                android:layout_width="152dp"
+                android:layout_height="155dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/reyes_magos"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="216dp"
+        android:text="@string/SaveSetting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingTable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

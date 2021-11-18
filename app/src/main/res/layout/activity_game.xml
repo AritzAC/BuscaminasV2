@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/consGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <TextView
+        android:id="@+id/textUsernameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/text_username"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintEnd_toStartOf="@+id/restart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/banderas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/restart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="@string/btnDesactivado"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="272dp" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid"
+        android:layout_width="360dp"
+        android:layout_height="448dp"
+
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="26dp"
+
+
+        app:columnCount="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:rowCount="9">
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/time"
+        app:layout_constraintEnd_toStartOf="@+id/restart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/restart"
+        android:layout_width="65dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="59dp"
+        android:background="@drawable/reset"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.159"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
